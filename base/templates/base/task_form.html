@@ -1,0 +1,32 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href= "{% url 'tasks' %}">&#8592; Back</a> 
+
+
+
+
+
+
+</div>
+
+
+<div class="card_body">
+    <form method="POST" action="">
+        {% csrf_token %} <!-- protects from forgery-->
+        {{form.as_p}} <!-- default the admin form name is "form"-->
+        <input class ="button" type="SUBMIT" value"Submit">
+    </form>
+
+</div>
+
+
+
+
+
+
+    
+
+
+{%endblock content%}
